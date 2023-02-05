@@ -1,0 +1,242 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+body{
+    background-size: cover;
+    background-position: center;
+    background: url('605700.png') no-repeat fixed;
+    margin: 0;
+    height: 100vh;
+    width: 100vh;
+}
+
+/*Menu superior do site*/
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgb(0, 0, 0);
+    box-shadow: 0 5px 10px rgba(0, 255, 255, 0.418);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000; 
+}
+
+header .logo{
+    font-weight: bolder;
+}
+
+header .logo img{
+    position: relative;
+    left: 0;
+    width: 150px;
+    margin-left: -20px;
+}
+
+header .navbar ul{
+    list-style: none;
+}
+
+header .navbar ul li{
+    position: relative;
+    float: left;
+    left: 0px;
+}
+
+header .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: rgb(230, 230, 230);
+    display: block;
+    position: relative;
+}
+header .navbar ul li a img{
+   width: 30px;
+}
+header .navbar ul li a:hover{
+    background: linear-gradient(rgba(27, 27, 27, 0.295),#222222);
+    color: rgb(0, 247, 255);
+}
+
+/*Background menu oculto*/
+header .navbar ul li ul{
+   position: absolute;
+   left: 0px;
+   width: 200px;
+   background: rgb(37, 37, 37);
+   display: none;
+}
+
+header .navbar ul li ul li{
+    width: 100%;
+    position: relative;
+    left: 0px;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+    
+}
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px){
+
+    header{
+        padding: 20px;
+    }
+
+    header label{
+        display: initial;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;left: 0;right: 0;
+        background: rgb(39, 39, 39);
+        border-top: 1px solid rgb(255, 0, 0);
+        display: none;
+    }
+
+    header .navbar ul li{
+        width: 100%;
+    }
+
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+        
+    }
+
+    header .navbar ul li ul li{
+        background: rgb(27, 27, 27);
+    }
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+}
+
+/*Input de pesquisa*/
+.search-box{
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(rgba(27, 27, 27, 0.295),#222222);
+    height: 30px;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -30px ;
+}
+
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #f0f5fb;
+    font-size: 16px;
+    line-height: 40px;
+    width: 0;
+    transition: .8s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-input-placeholder{
+     color: #00fff2d0;
+}
+
+.search-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .8s;
+}
+
+.search-box:hover > .search-txt{
+     width: 240px;
+     padding: 0 6px;
+}
+
+
+
+
+h1{
+    z-index: 9999;
+    position: relative;
+    top: 18vh;
+    left: 70%;
+    justify-content: center;
+    color: #f0f5fb;
+    font-size: 50px;
+}
+
+
+
+#flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1335px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 150px;
+}
+
+.flex img{
+    width: 300px;
+    position: relative;
+    margin: 10px;
+    background-color: black;
+    border-radius: 8px;
+}
+.flex:hover img{
+    transform: scale(1.06);
+    
+}
+
+.flex p{
+    margin-top: 20px;
+    color: #f0f5fb;
+    text-align: center;
+    font-size: x-large;
+}
+
+
+
+
+
